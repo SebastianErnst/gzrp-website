@@ -1,0 +1,22 @@
+// Breakpoints
+$breakpoints: (
+        'small': 480px,
+        'medium': 880px,
+        'large': 1366px,
+        'xlarge': 1920px,
+);
+
+$media-direction: max; // min / max — default is min (mobile first)
+
+@mixin breakpoint($breakpoint,$direction: $media-direction) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (#{$direction}-width: #{map-get($breakpoints, $breakpoint)}) {
+            @content;
+        }
+    } @else if unitless($breakpoint) {
+        $breakpoint: $breakpoint + 0px;
+        @media (#{$direction}-width: $breakpoint) {
+            @content;
+        }
+    }
+}

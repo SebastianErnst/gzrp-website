@@ -1,0 +1,23 @@
+@import "mixins";
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: {
+        family: var(--font-family);
+        weight: 400;
+        size: var(--font-size-default);
+    }
+    background: {
+        color: var(--grey-color);
+    }
+    @include breakpoint(small) {
+        font: {
+            size: var(--font-size-small);
+        }
+    }
+}

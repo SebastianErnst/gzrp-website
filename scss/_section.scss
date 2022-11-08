@@ -1,0 +1,20 @@
+section {
+    padding: {
+        top: var(--spacing-large);
+        bottom: var(--spacing-large);
+    }
+}
+
+.section-wrapper {
+    max: {
+        width: 1366px;
+    }
+    margin: {
+        right: auto;
+        left: auto;
+    }
+    padding: {
+        right: var(--spacing-default);
+        left: var(--spacing-default);
+    }
+}

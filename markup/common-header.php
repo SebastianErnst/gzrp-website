@@ -1,9 +1,9 @@
 <?php
 
-$title = 'WHITE LEAF';
-$author = $title;
-$domain = 'https://whiteleaf.de/';
-$metaDescription = 'White Leaf - German Rock / Metal band';
+$title = 'GZRP - GTA Online roleplay server';
+$author = 'GZRP';
+$domain = '/';
+$metaDescription = 'GZRP - GTA Online roleplay server';
 $assetPath = $domain.'assets/';
 $socialShareImage = $assetPath.'bg-2.png';
 $date = '2021-01-18T11:07:26+02:00'

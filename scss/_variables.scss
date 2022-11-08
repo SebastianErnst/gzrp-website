@@ -1,0 +1,29 @@
+:root {
+    // Font
+    --font-family: Roboto, Arial, Helvetica, system-ui, sans-serif;
+    --font-family-headline: Anton, Arial, Helvetica, system-ui, sans-serif;
+    --font-size-small: 87.5%;
+    --font-size-default: 100%;
+    --font-size-large: 200%;
+    --font-size-xlarge: 300%;
+
+    // Spacings
+    --spacing-small: 0.625rem;
+    --spacing-default: 1rem;
+    --spacing-large: 2rem;
+    --spacing-xlarge: 4rem;
+
+    // Colors
+    --cyan-color: #00e9e7;
+    --magenta-color: #d90076;
+    --purple-color: #9d14d2;
+    --grey-light-color: #485358;
+    --grey-color: #393f41;
+    --grey-dark-color: #1b1f21;
+
+    --font-color: black;
+
+    --link-color: var(--cyan-color);
+    --link-hover-color: var(--purple-color);
+    --link-hover-transition: color 0.2s ease-out;
+}
