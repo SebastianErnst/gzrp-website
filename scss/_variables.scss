@@ -1,17 +1,9 @@
-:root {
-    // Font
-    --font-family: Roboto, Arial, Helvetica, system-ui, sans-serif;
-    --font-family-headline: Anton, Arial, Helvetica, system-ui, sans-serif;
-    --font-size-small: 87.5%;
-    --font-size-default: 100%;
-    --font-size-large: 200%;
-    --font-size-xlarge: 300%;
+@import "mixins";
 
-    // Spacings
-    --spacing-small: 0.625rem;
-    --spacing-default: 1rem;
-    --spacing-large: 2rem;
-    --spacing-xlarge: 4rem;
+:root {
+    // Sections
+    --section-max-width: 1366px;
+    --content-max-width: 1920px;
 
     // Colors
     --cyan-color: #00e9e7;
@@ -19,11 +11,47 @@
     --purple-color: #9d14d2;
     --grey-light-color: #485358;
     --grey-color: #393f41;
-    --grey-dark-color: #1b1f21;
+    --grey-dark-color: #111315;
 
-    --font-color: black;
+    // Font
+    --font-family: Roboto, Arial, Helvetica, system-ui, sans-serif;
+    --font-family-headline: Anton, Arial, Helvetica, system-ui, sans-serif;
+    --font-size-small: 87.5%;
+    --font-size-default: 100%;
+    --font-size-large: 200%;
+    --font-size-xlarge: 300%;
+    --font-color: white;
 
+    // Spacings
+    --spacing-small: 0.3rem;
+    --spacing-default: 0.5rem;
+    --spacing-large: 1rem;
+    --spacing-xlarge: 2rem;
+
+    @include breakpoint(medium) {
+        --spacing-small: 0.625rem;
+        --spacing-default: 1rem;
+        --spacing-large: 2rem;
+        --spacing-xlarge: 4rem;
+    }
+
+    // Buttons
+    --button-color: var(--cyan-color);
+    --button-border-color: var(--cyan-color);
+    --button-hover-color: white;
+    --button-hover-border-color: var(--magenta-color);
+    --button-hover-transition-in: 0.3s ease-out;
+    --button-hover-transition-out: 0.15s ease-out;
+    --button-secondary-color: white;
+    --button-secondary-border-color: white;
+    --button-secondary-hover-color: white;
+    --button-secondary-hover-border-color: var(--magenta-color);
+
+    // Links
     --link-color: var(--cyan-color);
-    --link-hover-color: var(--purple-color);
+    --link-hover-color: var(--magenta-color);
     --link-hover-transition: color 0.2s ease-out;
+
+    // Feature Slider
+    --feature-slider-thumbnail-transition: 0.2s ease-out;
 }

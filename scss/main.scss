@@ -1,11 +1,15 @@
 @charset "UTF-8";
 
+@use "../node_modules/swiper/css/swiper.min.css";
 @use "variables";
 @use "mixins";
 @use "fonts";
 @use "base";
 @use "typo";
+@use "links";
 @use "button";
+@use "list";
 @use "table";
 @use "section";
 @use "stage";
+@use "feature-slider";

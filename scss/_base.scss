@@ -1,5 +1,11 @@
 @import "mixins";
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html,
 body {
     margin: 0;
@@ -7,17 +13,18 @@ body {
 }
 
 body {
+    color: var(--font-color);
     font: {
         family: var(--font-family);
         weight: 400;
-        size: var(--font-size-default);
+        size: 75%;
     }
     background: {
-        color: var(--grey-color);
+        color: var(--grey-dark-color);
     }
-    @include breakpoint(small) {
+    @include breakpoint(medium) {
         font: {
-            size: var(--font-size-small);
+            size: 100%;
         }
     }
 }

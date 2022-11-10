@@ -1,17 +1,25 @@
-section {
+section,
+.section {
+    max: {
+        width: var(--content-max-width);
+    }
     padding: {
         top: var(--spacing-large);
         bottom: var(--spacing-large);
     }
-}
-
-.section-wrapper {
-    max: {
-        width: 1366px;
-    }
     margin: {
         right: auto;
         left: auto;
+    }
+}
+
+.section-wrapper {
+    margin: {
+        right: auto;
+        left: auto;
+    }
+    max: {
+        width: var(--section-max-width);
     }
     padding: {
         right: var(--spacing-default);

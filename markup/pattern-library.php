@@ -1,3 +1,7 @@
+<?php
+    require_once 'features.php';
+?>
+
 <section>
     <div class="section-wrapper">
         <h2 class="h2">Typo</h2>
@@ -36,6 +40,38 @@
         <h3 class="h3">Headline H3</h3>
 
         <h4 class="h4">Headline H4</h4>
+
+    </div>
+</section>
+
+<section class="section narrow">
+    <div class="section-wrapper">
+
+        <h2 class="h2">Button</h2>
+
+        <ul class="button-list">
+            <li>
+                <button type="button" class="button">
+                    <span>Button</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="button secondary">
+                    <span>Button Secondary</span>
+                </button>
+            </li>
+            <li>
+                <a href="/" type="button" class="button">
+                    <span>Button Link</span>
+                </a>
+            </li>
+            <li>
+                <a href="/" type="button" class="button secondary">
+                    <span>Button Link Secondary</span>
+                </a>
+            </li>
+
+        </ul>
 
     </div>
 </section>
@@ -82,13 +118,17 @@
 
         <ul>
             <li>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</li>
-            <li>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue</li>
+            <li>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                praesent luptatum zzril delenit augue
+            </li>
             <li>Duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer</li>
         </ul>
 
         <ol>
             <li>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</li>
-            <li>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue</li>
+            <li>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                praesent luptatum zzril delenit augue
+            </li>
             <li>Duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer</li>
         </ol>
 

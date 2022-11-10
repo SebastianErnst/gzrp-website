@@ -1,0 +1,154 @@
+@import "mixins";
+
+.feature-slider {
+    padding: {
+        top: 0;
+        bottom: 0;
+    }
+    .swiper {
+        z-index: 1;
+        overflow: hidden;
+        .swiper-slide {
+            height: auto;
+            background: {
+                position: top;
+                size: cover;
+                image: linear-gradient(to right, black 66%, darken(#d90076, 20%));
+            }
+            padding: {
+                top: var(--spacing-large);
+            }
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            @include breakpoint(medium) {
+                aspect-ratio: unset;
+                padding: {
+                    bottom: 250px;
+                }
+                min-height: 800px;
+            }
+            .background-image {
+                @include absolute-stretch();
+                background: {
+                    size: cover;
+                    position: top;
+                }
+                mix-blend-mode: luminosity;
+            }
+            .section-wrapper {
+                position: relative;
+                .content {
+                    max: {
+                        width: 75%;
+                    }
+                    @include breakpoint(medium) {
+                        max: {
+                            width: 66.66%;
+                        }
+                    }
+                    @include breakpoint(large) {
+                        max: {
+                            width: 50%;
+                        }
+                    }
+                }
+                h2,
+                p {
+                    @include text-shadow;
+                }
+                h2 {
+                    margin: {
+                        bottom: var(--spacing-default);
+                    }
+                }
+                p {
+                    font: {
+                        size: var(--font-size-large);
+                    }
+                }
+            }
+        }
+    }
+    .thumbnail-list {
+        position: relative;
+        z-index: 2;
+        padding: {
+            top: var(--spacing-large);
+            bottom: var(--spacing-large);
+        }
+        @include breakpoint(medium) {
+            padding: {
+                top: 0;
+                bottom: 0;
+            }
+        }
+        ul {
+            @include rest-list();
+            display: grid;
+            grid: {
+                template: {
+                    columns: repeat(auto-fit, minmax(150px, 1fr));
+                }
+            }
+            gap: var(--spacing-default);
+            @include breakpoint(medium) {
+                position: absolute;
+                left: var(--spacing-default);;
+                top: var(--spacing-default);;
+                width: calc( 100% - (var(--spacing-default)* 2));
+                transform: translateY(calc(-100% - var(--spacing-xlarge)));
+            }
+            li {
+                cursor: pointer;
+                position: relative;
+                border: {
+                    width: 3px;
+                    style: solid;
+                    color: var(--cyan-color);
+                }
+                aspect-ratio: 16/9;
+                background: {
+                    size: cover;
+                }
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: border-color var(--feature-slider-thumbnail-transition);
+                &:hover {
+                    border: {
+                        color: var(--magenta-color);
+                    }
+                    .background-image {
+                        filter: blur(0) grayscale(1);
+                    }
+                }
+                &.active {
+                    border: {
+                        color: var(--magenta-color);
+                    }
+                    .background-image {
+                        filter: blur(0) grayscale(0);
+                    }
+                }
+                .background-image {
+                    @include absolute-stretch();
+                    background: {
+                        size: cover;
+                    }
+                    filter: blur(2px) grayscale(1);
+                    transition: filter var(--feature-slider-thumbnail-transition)
+                }
+                span {
+                    @include text-shadow();
+                    position: relative;
+                    z-index: 1;
+                    margin: {
+                        bottom: 0;
+                    }
+                    color: white;
+                }
+            }
+        }
+    }
+}

@@ -6,7 +6,7 @@ $breakpoints: (
         'xlarge': 1920px,
 );
 
-$media-direction: max; // min / max — default is min (mobile first)
+$media-direction: min; // min / max — default is min (mobile first)
 
 @mixin breakpoint($breakpoint,$direction: $media-direction) {
     @if map-has-key($breakpoints, $breakpoint) {
@@ -18,5 +18,62 @@ $media-direction: max; // min / max — default is min (mobile first)
         @media (#{$direction}-width: $breakpoint) {
             @content;
         }
+    }
+}
+
+@mixin rest-list() {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin absolute-stretch() {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+@mixin text-shadow() {
+    text-shadow: 2px 2px black;
+}
+
+@mixin hover-gradient() {
+    overflow: hidden;
+    &::before {
+        @include absolute-stretch();
+        z-index: 1;
+        content: "";
+        background: {
+            image: linear-gradient(to right, transparent 75%, var(--button-hover-border-color));
+        }
+        transform: translateX(50%);
+        transition: transform 0.3s ease-out;
+    }
+    &:hover {
+        &::before {
+            transform: translateX(0);
+        }
+    }
+}
+
+@mixin hover-gradient-base() {
+    overflow: hidden;
+    &::before {
+        @include absolute-stretch();
+        z-index: 1;
+        content: "";
+        background: {
+            image: linear-gradient(to right, transparent 75%, var(--button-hover-border-color));
+        }
+        transform: translateX(50%);
+        transition: transform 0.3s ease-out;
+    }
+}
+
+@mixin hover-gradient-active() {
+    &::before {
+        transform: translateX(0);
     }
 }
