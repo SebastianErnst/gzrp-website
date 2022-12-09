@@ -11,7 +11,7 @@
         </ul>
         <div class="online-counter">
             <span class="text">Online</span>
-            <span class="number">5000</span>
+            <span class="number" data-online-counter-number>0</span>
         </div>
     </div>
 </nav>
