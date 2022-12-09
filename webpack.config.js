@@ -2,7 +2,7 @@ const path = require('path'),
     webpack = require('webpack');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     watch: true,
     recordsPath: path.resolve(__dirname, './records.json'),
     entry: {
