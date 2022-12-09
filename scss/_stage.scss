@@ -1,16 +1,60 @@
+@import "mixins";
+
 .stage {
-    aspect-ratio: 1366/600;
+    aspect-ratio: 16/9;
+    margin: {
+        top: var(--menu-height);
+    }
+    width: 100%;
+    max: {
+        height: calc(100vh - var(--menu-height));
+    }
     background: {
-        image: url("../assets/4.jpg");
         repeat: no-repeat;
         position: top;
         size: cover;
     }
-    .claim {
-
+    position: relative;
+    display: flex;
+    align-items: center;
+    &::before {
+        content: "";
+        @include absolute-stretch();
+        background: {
+            image: linear-gradient(to right,
+                    rgba(black, 0.90) 10%,
+                    rgba(black, 0.85) 20%,
+                    rgba(black, 0.75) 30%,
+                    rgba(black, 0.65) 40%,
+                    transparent);
+        }
     }
-    .online-counter {
+    .content {
+        position: relative;
+        display: flex;
+        flex: {
+            direction: column;
+        }
+        justify-content: space-between;
+        align-items: flex-start;
 
+        @include breakpoint(small) {
+            width: 66%;
+        }
+        @include breakpoint(medium) {
+            width: 50%;
+        }
+        @include breakpoint(large) {
+            width: 40%;
+        }
+    }
+    .claim {
+        margin: {
+            bottom: var(--spacing-xlarge);
+        }
+        font: {
+            size: var(--font-size-large);
+        }
     }
     .arrow-next-section {
 

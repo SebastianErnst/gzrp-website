@@ -1,7 +1,6 @@
-#RewriteEngine on
-#RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-#RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-#RewriteCond %{HTTPS} !on
-#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-#
-#SetOutputFilter DEFLATE
+#Header set Access-Control-Allow-Origin "*"
+#Header set Content-Security-Policy "frame-ancestors 'none'; form-action 'self'; default-src 'none'; script-src 'unsafe-eval' 'self' 'unsafe-inline' http://85.214.40.194:8080; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src http://85.214.40.194:8080 'self'; frame-src 'self';" env=!SECURITY_HEADERS_OFF
+#Header set Referrer-Policy "origin-when-cross-origin" env=!SECURITY_HEADERS_OFF
+#Header set X-Content-Type-Options "nosniff" env=!SECURITY_HEADERS_OFF
+#Header set X-Frame-Options "DENY" env=!SECURITY_HEADERS_OFF
+#Header set X-XSS-Protection "1; mode=block" env=!SECURITY_HEADERS_OFF

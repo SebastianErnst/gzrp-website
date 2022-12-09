@@ -65,7 +65,7 @@ $media-direction: min; // min / max — default is min (mobile first)
         z-index: 1;
         content: "";
         background: {
-            image: linear-gradient(to right, transparent 75%, var(--button-hover-border-color));
+            image: linear-gradient(to right, transparent 75%, var(--cta-color-2));
         }
         transform: translateX(50%);
         transition: transform 0.3s ease-out;
@@ -75,5 +75,11 @@ $media-direction: min; // min / max — default is min (mobile first)
 @mixin hover-gradient-active() {
     &::before {
         transform: translateX(0);
+    }
+}
+
+@mixin hover-gradient-inactive() {
+    &::before {
+        transform: translateX(50%);
     }
 }

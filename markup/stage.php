@@ -1,8 +1,11 @@
-<!--<header class="section stage">-->
-<!--    <div class="section-wrapper">-->
-<!--        <span class="claim h2">lorem ipsum claim</span>-->
-<!--        <div class="online-counter"></div>-->
-<!--        <a class="button" href="">Jetzt mitmischen</a>-->
-<!--        <div class="arrow-next-section">V</div>-->
-<!--    </div>-->
-<!--</header>-->
+<header id="home" class="section stage" style="background-image: url('assets/header.jpg')">
+    <div class="section-wrapper">
+        <div class="content">
+            <h1 class="h1">GZRP - GTA Online Roleplay Server</h1>
+            <p class="claim">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dolor dolorum eos est explicabo impedit incidunt obcaecati perferendis quaerat sunt.</p>
+            <a class="button big" href="">
+                <span>Jetzt mitmischen</span>
+            </a>
+        </div>
+    </div>
+</header>

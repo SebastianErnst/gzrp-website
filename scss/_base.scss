@@ -20,7 +20,7 @@ body {
         size: 75%;
     }
     background: {
-        color: var(--grey-dark-color);
+        color: black;
     }
     @include breakpoint(medium) {
         font: {

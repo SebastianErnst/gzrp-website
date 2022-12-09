@@ -1,0 +1,14 @@
+@import "mixins";
+
+.image-teaser {
+    background: {
+        size: cover;
+        position: top center;
+    }
+    .h2 {
+        @include text-shadow();
+        margin: {
+            bottom: 10rem;
+        }
+    }
+}

@@ -1,7 +1,3 @@
-<?php
-    require_once 'features.php';
-?>
-
 <section>
     <div class="section-wrapper">
         <h2 class="h2">Typo</h2>

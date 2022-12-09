@@ -3,15 +3,16 @@
 :root {
     // Sections
     --section-max-width: 1366px;
-    --content-max-width: 1920px;
+    --content-max-width: 2560px;
 
     // Colors
-    --cyan-color: #00e9e7;
-    --magenta-color: #d90076;
-    --purple-color: #9d14d2;
+    --cta-color-1: #285CFF;
+    --cta-color-2: #F64D4D;
+    --cta-color-3: #9d14d2;
     --grey-light-color: #485358;
     --grey-color: #393f41;
     --grey-dark-color: #111315;
+    --grey-dark-color-15: #{rgba(#111315, 0.15)};
 
     // Font
     --font-family: Roboto, Arial, Helvetica, system-ui, sans-serif;
@@ -21,6 +22,9 @@
     --font-size-large: 200%;
     --font-size-xlarge: 300%;
     --font-color: white;
+    --font-weight-thin: 300;
+    --font-weight-default: 400;
+    --font-weight-bold: 500;
 
     // Spacings
     --spacing-small: 0.3rem;
@@ -36,22 +40,31 @@
     }
 
     // Buttons
-    --button-color: var(--cyan-color);
-    --button-border-color: var(--cyan-color);
-    --button-hover-color: white;
-    --button-hover-border-color: var(--magenta-color);
+    --button-background: transparent;
+    --button-background-hover-color: white;
+    --button-color: white;
+    --button-hover-color: black;
+    --button-border-color: var(--cta-color-2);
+    --button-hover-border-color: white;
     --button-hover-transition-in: 0.3s ease-out;
     --button-hover-transition-out: 0.15s ease-out;
     --button-secondary-color: white;
     --button-secondary-border-color: white;
     --button-secondary-hover-color: white;
-    --button-secondary-hover-border-color: var(--magenta-color);
+    --button-secondary-hover-border-color: var(--cta-color-2);
 
     // Links
-    --link-color: var(--cyan-color);
-    --link-hover-color: var(--magenta-color);
+    --link-color: var(--cta-color-1);
+    --link-hover-color: var(--cta-color-2);
     --link-hover-transition: color 0.2s ease-out;
 
     // Feature Slider
     --feature-slider-thumbnail-transition: 0.2s ease-out;
+
+    // Menu
+    --menu-height: 80px;
+
+    // Border
+    --border-radius: 4px;
+
 }

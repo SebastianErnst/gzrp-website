@@ -1,11 +1,14 @@
 section,
 .section {
+    background: {
+        color: var(--grey-dark-color);
+    }
     max: {
         width: var(--content-max-width);
     }
     padding: {
-        top: var(--spacing-large);
-        bottom: var(--spacing-large);
+        top: var(--spacing-xlarge);
+        bottom: var(--spacing-xlarge);
     }
     margin: {
         right: auto;
@@ -18,11 +21,19 @@ section,
         right: auto;
         left: auto;
     }
+    width: 100%;
     max: {
         width: var(--section-max-width);
     }
     padding: {
         right: var(--spacing-default);
         left: var(--spacing-default);
+    }
+    > * {
+        &:last-child {
+            margin: {
+                bottom: 0;
+            }
+        }
     }
 }
