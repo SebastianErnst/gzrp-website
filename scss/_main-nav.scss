@@ -1,7 +1,9 @@
-@import "mixins";
+@use "mixins" as mixins;
+@use "icons" as icons;
+
 
 .main-nav {
-    width: 100%;
+    width: 100vw;
     max: {
         width: var(--content-max-width);
     }
@@ -28,15 +30,16 @@
     }
     .logo {
         display: block;
-        background: var(--cta-color-2);
-        width: 50px;
-        height: 50px;
-        border: {
-            radius: 50%;
+        background: {
+            image: url("../assets/logo.png");
+            size: cover;
+            position: center center;
         }
+        aspect-ratio: 8376 / 4227;
+        width: 100px;
     }
     ul {
-        @include rest-list;
+        @include mixins.rest-list();
         height: 100%;
         display: flex;
         li {
@@ -55,6 +58,12 @@
                 bottom: 2px solid transparent;
             }
             transition: border-color 0.2s ease-out;
+            font: {
+                size: var(--font-size-medium);
+            }
+            &::before {
+                content: unset;
+            }
             &:hover,
             &.active {
                 border: {
@@ -67,6 +76,7 @@
     }
     .online-counter {
         display: flex;
+        justify-content: flex-start;
         align-items: center;
         border: {
             width: 2px;
@@ -74,20 +84,30 @@
             color: var(--cta-color-2);
             radius: var(--border-radius);
         }
-        gap: var(--spacing-default);
         padding: {
-            top: var(--spacing-default);
+            top: var(--spacing-small);
             right: var(--spacing-default);
-            bottom: var(--spacing-default);
+            bottom: var(--spacing-small);
             left: var(--spacing-default);
+        }
+        &::before {
+            @include mixins.icon(icons.$icon-users);
+            margin: {
+                right: var(--spacing-small);
+            }
         }
         .text {
             text-transform: uppercase;
+            margin: {
+                right: var(--spacing-large);
+            }
         }
         .number {
-            @include text-shadow();
+            @include mixins.text-shadow();
+            line-height: 1;
             font: {
                 family: var(--font-family-headline);
+                size: var(--spacing-large);
             }
         }
     }

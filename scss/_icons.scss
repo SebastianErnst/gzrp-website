@@ -1,0 +1,61 @@
+@use "mixins" as mixins;
+
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "fonts" !default;
+
+$icon-discord: "\e900";
+$icon-teamspeak: "\e901";
+$icon-coin-dollar: "\e93b";
+$icon-users: "\e972";
+$icon-lab: "\e9aa";
+$icon-arrow-down: "\ea36";
+$icon-facebook: "\ea90";
+$icon-instagram: "\ea92";
+$icon-youtube: "\ea9d";
+
+.icon {
+    &::before {
+        font: {
+            size: var(--font-size-large);
+        }
+    }
+}
+
+.flask {
+    &::before {
+        @include mixins.icon($icon-lab);
+    }
+}
+
+.facebook {
+    &::before {
+        @include mixins.icon($icon-facebook);
+    }
+}
+
+.discord {
+    &::before {
+        @include mixins.icon($icon-discord);
+    }
+}
+
+.teamspeak {
+    &::before {
+        @include mixins.icon($icon-teamspeak);
+    }
+}
+
+.instagram {
+    &::before {
+        @include mixins.icon($icon-instagram);
+    }
+}
+
+.youtube {
+    &::before {
+        @include mixins.icon($icon-youtube);
+    }
+}
+
+
+

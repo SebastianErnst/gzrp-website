@@ -19,20 +19,24 @@
     --font-family-headline: Anton, Arial, Helvetica, system-ui, sans-serif;
     --font-size-small: 87.5%;
     --font-size-default: 100%;
+    --font-size-medium: 150%;
     --font-size-large: 200%;
     --font-size-xlarge: 300%;
+    --font-size-xxlarge: 400%;
     --font-color: white;
     --font-weight-thin: 300;
     --font-weight-default: 400;
     --font-weight-bold: 500;
 
     // Spacings
+    --spacing-xsmall: 1.5rem;
     --spacing-small: 0.3rem;
     --spacing-default: 0.5rem;
     --spacing-large: 1rem;
     --spacing-xlarge: 2rem;
 
     @include breakpoint(medium) {
+        --spacing-xsmall: 0.3rem;
         --spacing-small: 0.625rem;
         --spacing-default: 1rem;
         --spacing-large: 2rem;
@@ -54,8 +58,8 @@
     --button-secondary-hover-border-color: var(--cta-color-2);
 
     // Links
-    --link-color: var(--cta-color-1);
-    --link-hover-color: var(--cta-color-2);
+    --link-color: var(--cta-color-2);
+    --link-hover-color: var(--font-color);
     --link-hover-transition: color 0.2s ease-out;
 
     // Feature Slider

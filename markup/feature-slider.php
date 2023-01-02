@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="background-image" style="background-image: url('assets/4.jpg')"></div>
+                <div class="background-image" style="background-image: url('assets/feature-slider-4.png')"></div>
                 <div class="section-wrapper">
                     <div class="content">
                         <h2 class="h1">Feature 4</h2>
@@ -59,10 +59,9 @@
                 <span class="h2">Feature 3</span>
             </li>
             <li>
-                <div class="background-image" style="background-image: url('assets/4.jpg')"></div>
+                <div class="background-image" style="background-image: url('assets/feature-slider-4-thumb.jpg')"></div>
                 <span class="h2">Feature 4</span>
             </li>
         </ul>
     </div>
-
 </section>

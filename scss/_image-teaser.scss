@@ -5,8 +5,22 @@
         size: cover;
         position: top center;
     }
+    position: relative;
+    &::before {
+        content: "";
+        @include absolute-stretch();
+        background: {
+            image: linear-gradient(to right,
+                    rgba(black, 0.90) 10%,
+                    rgba(black, 0.85) 20%,
+                    rgba(black, 0.75) 30%,
+                    rgba(black, 0.65) 40%,
+                    transparent);
+        }
+    }
     .h2 {
         @include text-shadow();
+        position: relative;
         margin: {
             bottom: 10rem;
         }

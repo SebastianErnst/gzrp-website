@@ -1,7 +1,7 @@
 section,
 .section {
     background: {
-        color: var(--grey-dark-color);
+        color: black;
     }
     max: {
         width: var(--content-max-width);
@@ -26,8 +26,8 @@ section,
         width: var(--section-max-width);
     }
     padding: {
-        right: var(--spacing-default);
-        left: var(--spacing-default);
+        right: var(--spacing-large);
+        left: var(--spacing-large);
     }
     > * {
         &:last-child {

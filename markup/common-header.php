@@ -1,7 +1,7 @@
 <?php
 
-$title = 'GZRP - GTA Online roleplay server';
-$author = 'GZRP';
+$title = 'GZR - GTA Online roleplay server';
+$author = 'GZR';
 $domain = '/';
 $metaDescription = 'GZRP - GTA Online roleplay server';
 $assetPath = $domain.'assets/';

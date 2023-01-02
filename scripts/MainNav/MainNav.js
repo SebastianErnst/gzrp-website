@@ -15,10 +15,7 @@ export default class MainNav {
                     el.classList.remove('active');
                 });
                 $mainNavItem.classList.add(('active'));
-                $target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'}
-                );
+                this.scrollTo(identifier);
             });
         });
 
@@ -42,7 +39,7 @@ export default class MainNav {
 
         observer.observe(document.querySelector('header'));
 
-        const sections = document.querySelectorAll('section');
+        const sections = document.querySelectorAll('section[id]');
 
         for (let i = 0; i < sections.length; i++) {
             if (sections[i].id === '') {
@@ -50,5 +47,13 @@ export default class MainNav {
             }
             observer.observe(sections[i]);
         }
+    }
+
+    scrollTo (id) {
+        const yOffset = -10;
+        const element = document.getElementById(id);
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({top: y, behavior: 'smooth'});
     }
 }

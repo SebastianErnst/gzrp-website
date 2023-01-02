@@ -1,5 +1,16 @@
 @font-face {
     font: {
+        family: "icomoon";
+        display: block;
+        style: normal;
+        weight: normal;
+    }
+    src: url("../fonts/icomoon.woff") format("truetype"),
+    url("../fonts/icomoon.ttf") format("truetype");
+}
+
+@font-face {
+    font: {
         family: "Roboto";
         weight: 300;
         style: normal;

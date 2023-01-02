@@ -1,8 +1,30 @@
 a {
-    color: var(--link-color);
-    text-decoration: unset;
-    transition: var(--link-hover-transition);
-    &:hover {
-        color: var(--link-hover-color);
+    text-decoration: none;
+    &:not([class]) {
+        color: var(--link-color);
+        position: relative;
+        transition: color var(--button-hover-transition-out);
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: {
+                color: var(--link-color);
+            }
+            transition: background-color var(--button-hover-transition-out);
+        }
+        &:hover {
+            transition: color var(--button-hover-transition-in);
+            color: var(--link-hover-color);
+            &::before {
+                transition: background-color var(--button-hover-transition-in);
+                background: {
+                    color: var(--link-hover-color);
+                }
+            }
+        }
     }
 }

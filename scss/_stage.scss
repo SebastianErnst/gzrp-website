@@ -56,6 +56,16 @@
             size: var(--font-size-large);
         }
     }
+    .flask {
+        &::before {
+            font: {
+                size: var(--font-size-default);
+            }
+            margin: {
+                right: var(--spacing-small);
+            }
+        }
+    }
     .arrow-next-section {
 
     }

@@ -2,6 +2,7 @@
 
 @use "../node_modules/swiper/css/swiper.min.css";
 @use "variables";
+@use "icons";
 @use "mixins";
 @use "fonts";
 @use "base";
@@ -15,3 +16,6 @@
 @use "stage";
 @use "feature-slider";
 @use "image-teaser";
+@use "social-media-overview";
+@use "footer";
+@use "roadmap";

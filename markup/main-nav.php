@@ -8,6 +8,12 @@
             <li>
                 <a href="#features">Features</a>
             </li>
+            <li>
+                <a href="#roadmap">Roadmap</a>
+            </li>
+            <li>
+                <a href="#social-media">Kontakt</a>
+            </li>
         </ul>
         <div class="online-counter">
             <span class="text">Online</span>

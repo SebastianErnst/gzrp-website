@@ -3,6 +3,7 @@ p {
         top: 0;
     }
     max-width: 900px;
+    line-height: 1.5;
 }
 
 h1,
@@ -55,7 +56,6 @@ h3,
 h4,
 .h4 {
     font: {
-        size: var(--font-size-default);
+        size: var(--font-size-medium);
     }
 }
-

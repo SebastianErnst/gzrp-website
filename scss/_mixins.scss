@@ -41,7 +41,7 @@ $media-direction: min; // min / max — default is min (mobile first)
 
 @mixin hover-gradient() {
     overflow: hidden;
-    &::before {
+    &::after {
         @include absolute-stretch();
         z-index: 1;
         content: "";
@@ -60,7 +60,7 @@ $media-direction: min; // min / max — default is min (mobile first)
 
 @mixin hover-gradient-base() {
     overflow: hidden;
-    &::before {
+    &::after {
         @include absolute-stretch();
         z-index: 1;
         content: "";
@@ -73,13 +73,39 @@ $media-direction: min; // min / max — default is min (mobile first)
 }
 
 @mixin hover-gradient-active() {
-    &::before {
+    &::after {
         transform: translateX(0);
     }
 }
 
 @mixin hover-gradient-inactive() {
-    &::before {
+    &::after {
         transform: translateX(50%);
+    }
+}
+
+@function _fix-unicode($unicode) {
+    @return unquote("\"") + $unicode + unquote("\"");
+}
+
+@mixin icon-font() {
+    font: {
+        family: "icomoon" !important;
+        style: normal;
+        variant: normal;
+        weight: normal;
+    }
+    speak: none;
+    text: {
+        transform: none;
+    }
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon($name: null, $font-styles: true) {
+    content: _fix-unicode($name);
+    @if ($font-styles) {
+        @include icon-font();
     }
 }

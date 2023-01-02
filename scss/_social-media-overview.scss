@@ -1,0 +1,39 @@
+@use "mixins" as mixins;
+
+.social-media-overview {
+    .social-media-overview-list {
+        @include mixins.rest-list();
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: var(--spacing-large);
+        li {
+            a {
+                &::before {
+                    font: {
+                        size: var(--font-size-xxlarge);
+                    }
+                }
+                border: {
+                    radius: var(--border-radius);
+                }
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                aspect-ratio: 1;
+                background: {
+                    color: var(--cta-color-2);
+                }
+                color: var(--font-color);
+                transition: background-color var(--button-hover-transition-out), color var(--button-hover-transition-out);
+                &:hover,
+                &:focus {
+                    transition: background-color var(--button-hover-transition-in), color var(--button-hover-transition-in);
+                    background: {
+                        color: white;
+                    }
+                    color: var(--button-hover-color);
+                }
+            }
+        }
+    }
+}
