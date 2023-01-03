@@ -8,7 +8,11 @@ $icon-teamspeak: "\e901";
 $icon-coin-dollar: "\e93b";
 $icon-users: "\e972";
 $icon-lab: "\e9aa";
+$icon-arrow-right: "\ea34";
 $icon-arrow-down: "\ea36";
+$icon-arrow-left: "\ea38";
+$icon-circle-right: "\ea42";
+$icon-circle-left: "\ea44";
 $icon-facebook: "\ea90";
 $icon-instagram: "\ea92";
 $icon-youtube: "\ea9d";
@@ -18,6 +22,12 @@ $icon-youtube: "\ea9d";
         font: {
             size: var(--font-size-large);
         }
+    }
+}
+
+.teamspeak {
+    &::before {
+        @include mixins.icon($icon-teamspeak);
     }
 }
 
@@ -39,11 +49,7 @@ $icon-youtube: "\ea9d";
     }
 }
 
-.teamspeak {
-    &::before {
-        @include mixins.icon($icon-teamspeak);
-    }
-}
+
 
 .instagram {
     &::before {
@@ -57,5 +63,28 @@ $icon-youtube: "\ea9d";
     }
 }
 
-
-
+.arrow-right {
+    &:before {
+        @include mixins.icon($icon-arrow-right);
+    }
+}
+.arrow-down {
+    &:before {
+        @include mixins.icon($icon-arrow-down);
+    }
+}
+.arrow-left {
+    &:before {
+        @include mixins.icon($icon-arrow-left);
+    }
+}
+.circle-right {
+    &:before {
+        @include mixins.icon($icon-circle-right);
+    }
+}
+.circle-left {
+    &:before {
+        @include mixins.icon($icon-circle-left);
+    }
+}

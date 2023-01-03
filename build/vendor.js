@@ -36,6 +36,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./scripts/RoadmapSlider/RoadmapSlider.js":
+/*!************************************************!*\
+  !*** ./scripts/RoadmapSlider/RoadmapSlider.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return RoadmapSlider; });\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ 2);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_swiper_js_swiper_min__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/swiper/js/swiper.min */ 13);\n/* harmony import */ var _node_modules_swiper_js_swiper_min__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_swiper_js_swiper_min__WEBPACK_IMPORTED_MODULE_1__);\n//TODO: Jquery ausbauen\n\n\n\nclass RoadmapSlider {\n    constructor() {\n        const $roadmapSlider = jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-roadmap-slider]');\n        const roadmapSlider = new _node_modules_swiper_js_swiper_min__WEBPACK_IMPORTED_MODULE_1___default.a($roadmapSlider, {\n            speed: 750,\n            slidesPerView: 1,\n            spaceBetween: 60,\n            autoplay: {\n                delay: 5000\n            },\n            navigation: {\n                nextEl: $roadmapSlider.find('.next'),\n                prevEl: $roadmapSlider.find('.previous')\n            }\n        });\n    }\n}\n\n//# sourceURL=webpack:///./scripts/RoadmapSlider/RoadmapSlider.js?");
+
+/***/ }),
+
 /***/ 0:
 /*!*************************!*\
   !*** ./scripts/main.js ***!
@@ -44,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _MainNav_MainNav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MainNav/MainNav */ \"./scripts/MainNav/MainNav.js\");\n/* harmony import */ var _FeatureSlider_FeatureSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FeatureSlider/FeatureSlider */ \"./scripts/FeatureSlider/FeatureSlider.js\");\n/* harmony import */ var _PlayerCounter_PlayerCounter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PlayerCounter/PlayerCounter */ \"./scripts/PlayerCounter/PlayerCounter.js\");\n\r\n\r\n\r\n\r\nclass MainApplication {\r\n    constructor() {\r\n        this.initMainNav();\r\n        this.initFeatureSliders();\r\n        this.initPlayerCounter();\r\n    }\r\n\r\n    initPlayerCounter() {\r\n        const $playerCounters = document.querySelectorAll('[data-online-counter-number]');\r\n\r\n        $playerCounters.forEach(() => {\r\n            new _PlayerCounter_PlayerCounter__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\r\n        });\r\n\r\n    }\r\n\r\n    initMainNav() {\r\n        const $mainNav = document.querySelectorAll('.main-nav');\r\n\r\n        $mainNav.forEach(() => {\r\n            new _MainNav_MainNav__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\n        });\r\n    }\r\n\r\n    initFeatureSliders() {\r\n        const $featureSliders = document.querySelectorAll('[data-feature-slider]');\r\n\r\n        $featureSliders.forEach(() => {\r\n            new _FeatureSlider_FeatureSlider__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\n        });\r\n    }\r\n}\r\n\r\nnew MainApplication();\r\n\r\n\n\n//# sourceURL=webpack:///./scripts/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _MainNav_MainNav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MainNav/MainNav */ \"./scripts/MainNav/MainNav.js\");\n/* harmony import */ var _FeatureSlider_FeatureSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FeatureSlider/FeatureSlider */ \"./scripts/FeatureSlider/FeatureSlider.js\");\n/* harmony import */ var _RoadmapSlider_RoadmapSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RoadmapSlider/RoadmapSlider */ \"./scripts/RoadmapSlider/RoadmapSlider.js\");\n/* harmony import */ var _PlayerCounter_PlayerCounter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PlayerCounter/PlayerCounter */ \"./scripts/PlayerCounter/PlayerCounter.js\");\n\r\n\r\n\r\n\r\n\r\nclass MainApplication {\r\n    constructor() {\r\n        this.initMainNav();\r\n        this.initFeatureSliders();\r\n        this.initRoadmapSlider();\r\n        this.initPlayerCounter();\r\n    }\r\n\r\n    initPlayerCounter() {\r\n        const $playerCounters = document.querySelectorAll('[data-online-counter-number]');\r\n\r\n        $playerCounters.forEach(() => {\r\n            new _PlayerCounter_PlayerCounter__WEBPACK_IMPORTED_MODULE_3__[\"default\"]();\r\n        });\r\n\r\n    }\r\n\r\n    initMainNav() {\r\n        const $mainNav = document.querySelectorAll('.main-nav');\r\n\r\n        $mainNav.forEach(() => {\r\n            new _MainNav_MainNav__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\n        });\r\n    }\r\n\r\n    initFeatureSliders() {\r\n        const $featureSliders = document.querySelectorAll('[data-feature-slider]');\r\n\r\n        $featureSliders.forEach(() => {\r\n            new _FeatureSlider_FeatureSlider__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\n        });\r\n    }\r\n\r\n    initRoadmapSlider() {\r\n        const $featureSliders = document.querySelectorAll('[data-roadmap-slider]');\r\n\r\n        $featureSliders.forEach(() => {\r\n            new _RoadmapSlider_RoadmapSlider__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\r\n        });\r\n    }\r\n}\r\n\r\nnew MainApplication();\r\n\r\n\n\n//# sourceURL=webpack:///./scripts/main.js?");
 
 /***/ }),
 
@@ -82,9 +94,9 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 /***/ }),
 
 /***/ 2:
-/*!****************************************************!*\
-  !*** ./node_modules/jquery/dist/jquery.js-exposed ***!
-  \****************************************************/
+/*!********************************************!*\
+  !*** ./node_modules/jquery/dist/jquery.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

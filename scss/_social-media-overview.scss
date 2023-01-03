@@ -1,11 +1,32 @@
 @use "mixins" as mixins;
 
 .social-media-overview {
+    background: {
+        position: top;
+        size: cover;
+    }
+    .section-wrapper {
+        display: flex;
+        flex: {
+            direction: column;
+        }
+    }
+    .button {
+        justify-self: center;
+        margin: {
+            left: auto;
+            right: auto;
+            bottom: var(--spacing-large);
+        }
+    }
     .social-media-overview-list {
         @include mixins.rest-list();
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: var(--spacing-large);
+        margin: {
+            bottom: var(--spacing-xlarge);
+        }
         li {
             a {
                 &::before {

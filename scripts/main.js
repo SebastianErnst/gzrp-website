@@ -1,11 +1,13 @@
 import MainNav from "./MainNav/MainNav";
 import FeatureSlider from "./FeatureSlider/FeatureSlider";
+import RoadmapSlider from "./RoadmapSlider/RoadmapSlider";
 import PlayerCounter from "./PlayerCounter/PlayerCounter";
 
 class MainApplication {
     constructor() {
         this.initMainNav();
         this.initFeatureSliders();
+        this.initRoadmapSlider();
         this.initPlayerCounter();
     }
 
@@ -31,6 +33,14 @@ class MainApplication {
 
         $featureSliders.forEach(() => {
             new FeatureSlider();
+        });
+    }
+
+    initRoadmapSlider() {
+        const $featureSliders = document.querySelectorAll('[data-roadmap-slider]');
+
+        $featureSliders.forEach(() => {
+            new RoadmapSlider();
         });
     }
 }
